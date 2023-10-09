@@ -4,7 +4,7 @@ import openai
 
 driver = webdriver.Chrome()  
 
-openai.api_key = "Your_API_TOKEn"  
+openai.api_key = "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"  
 
 def main():
     st.title("Cadabra ✨")
@@ -22,6 +22,17 @@ def display_data_repository():
     st.write("Here you can access various biomedical research datasets from NASA Open Data Repository")
 
     st.subheader("Available Datasets")
+    datasets = [
+        {"name": "Dataset 1", "source": "Source 1"},
+        {"name": "Dataset 2", "source": "Source 2"},
+        {"name": "Dataset 3", "source": "Source 3"},
+        {"name": "Dataset 4", "source": "Source 4"},
+        ]
+
+    for dataset in datasets:
+        st.write(f"**Name:** {dataset['name']}")
+        st.write(f"**Source:** {dataset['source']}")
+        st.write("---") 
     
 def display_search_and_chat():
     st.header("Search and Chat")
@@ -59,4 +70,5 @@ def chat_with_gpt(scraped_data):
 if __name__ == "__main__":
     main()
 
+    
     
